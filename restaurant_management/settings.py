@@ -158,3 +158,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+from django.shortcuts import render
+
+def custom_404_view(request, exception=None):
+    return render(request, '404.html', status=404)

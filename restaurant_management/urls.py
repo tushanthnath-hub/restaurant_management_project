@@ -24,3 +24,7 @@ urlpatterns = [
     path('api/products/',include('products.urls')),
     path('api/orders/',include('orders.urls')),
 ]
+from django.conf.urls import handler404
+from . import views
+
+handler404 = views.custom_404_view

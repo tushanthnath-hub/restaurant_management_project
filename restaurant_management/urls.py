@@ -28,3 +28,12 @@ from django.conf.urls import handler404
 from . import views
 
 handler404 = views.custom_404_view
+from django.conf import settings
+from django.shortcuts import render
+
+class HomePageView:
+    def __call__(self, request):
+        context = {
+            'restaurant_name': settings.RESTAURANT_NAME
+        }
+        return render(request, 'home.html', context)

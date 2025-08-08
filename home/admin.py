@@ -1,3 +1,15 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import UserProfile, MenuItem  # replace MenuItem with your actual menu model name
+
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'name', 'email', 'phone_number')
+    search_fields = ('name', 'email', 'phone_number')
+    list_filter = ('user',)
+
+@admin.register(MenuItem)
+class MenuItemAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'description')
+    search_fields = ('name', 'description')
+    list_filter = ('price',)

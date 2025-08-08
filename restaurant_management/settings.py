@@ -120,25 +120,31 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ restaurant_name }}</title>
+    <title>About Us - Tasty Bites</title>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f9f9f9; text-align: center; padding: 50px;">
+<body style="font-family: Arial, sans-serif; background-color: #fafafa; text-align: center; padding: 40px;">
 
-    <div style="background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1); display: inline-block;">
-        <h1 style="color: #e74c3c; font-size: 48px; margin-bottom: 10px;">
-            Welcome to {{ restaurant_name }}
-        </h1>
-        <p style="color: #555; font-size: 20px; max-width: 500px; margin: auto;">
-            Serving delicious food with love and passion. Sit back, relax, and enjoy your meal!
-        </p>
-    </div>
+    <nav style="margin-bottom: 30px;">
+        <a href="/" style="margin-right: 20px; text-decoration: none; color: #e74c3c; font-weight: bold;">Home</a>
+        <a href="/about/" style="text-decoration: none; color: #333; font-weight: bold;">About</a>
+    </nav>
+
+    <h1 style="color: #e74c3c;">About Tasty Bites</h1>
+    <p style="max-width: 600px; margin: auto; font-size: 18px; color: #555;">
+        Welcome to <strong>Tasty Bites</strong> – your go-to spot for delicious and freshly made meals.
+        We pride ourselves on using fresh ingredients, traditional recipes, and a touch of love in every dish.
+    </p>
+
+    <img src="https://via.placeholder.com/600x300" alt="Restaurant Image" 
+         style="margin-top: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
 
 </body>
 </html>
+
+
 
 STATIC_URL = 'static/'
 

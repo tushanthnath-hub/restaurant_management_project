@@ -120,33 +120,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Restaurant Menu</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>{{ restaurant_name }}</title>
 </head>
-<body class="bg-light">
+<body style="font-family: Arial, sans-serif; background-color: #f9f9f9; text-align: center; padding: 50px;">
 
-    <div class="container py-5">
-        <h1 class="text-center text-primary mb-4">Our Menu</h1>
-
-        <div class="row">
-            {% for item in menu_items %}
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ item.name }}</h5>
-                            <p class="card-text">{{ item.description }}</p>
-                            <p class="fw-bold text-success">₹{{ item.price }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+    <div style="background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1); display: inline-block;">
+        <h1 style="color: #e74c3c; font-size: 48px; margin-bottom: 10px;">
+            Welcome to {{ restaurant_name }}
+        </h1>
+        <p style="color: #555; font-size: 20px; max-width: 500px; margin: auto;">
+            Serving delicious food with love and passion. Sit back, relax, and enjoy your meal!
+        </p>
     </div>
 
 </body>

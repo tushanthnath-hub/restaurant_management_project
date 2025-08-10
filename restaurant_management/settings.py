@@ -209,3 +209,4 @@ from django.shortcuts import render
 
 def custom_404_view(request, exception=None):
     return render(request, '404.html', status=404)
+    RESTAURANT_PHONE = "+91 98765 43210"

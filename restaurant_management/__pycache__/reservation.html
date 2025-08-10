@@ -1,29 +1,43 @@
+<!-- templates/home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reservations</title>
+    <title>Welcome to Our Restaurant</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fafafa;
-            text-align: center;
-            margin: 0;
-            padding-bottom: 60px; /* space so footer doesn't overlap content */
-        }
-        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf3e0;
             color: #333;
-            margin-top: 50px;
+            margin: 0;
+            padding: 0;
         }
-        p {
-            color: #555;
-            font-size: 18px;
-        }
-        footer {
-            background-color: #333;
+        header {
+            background-color: #d35400;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 30px 0 20px;
+        }
+        header img {
+            max-width: 180px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -31,13 +45,23 @@
     </style>
 </head>
 <body>
+    <header>
+        <!-- Replace 'logo.png' with the actual path in your static files -->
+        <img src="{% static 'images/logo.png' %}" alt="Restaurant Logo">
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Delicious food, cozy atmosphere</p>
+    </header>
 
-    <h1>Reservations</h1>
-    <p>This page is under construction. Reservation features will be coming soon!</p>
+    <main>
+        <h2>About Us</h2>
+        <p>
+            We serve freshly prepared dishes made from locally sourced ingredients. 
+            Whether you’re here for a quick lunch or a special dinner, we’re excited to serve you.
+        </p>
+    </main>
 
     <footer>
-        <p>&copy; {{ current_year }} Your Restaurant Name. All rights reserved.</p>
+        &copy; {{ current_year }} Our Restaurant. All rights reserved.
     </footer>
-
 </body>
 </html>

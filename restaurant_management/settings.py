@@ -123,24 +123,77 @@ USE_TZ = True
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About Us - Tasty Bites</title>
+    <title>Restaurant Homepage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #ff6347; /* Tomato color */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        main p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #fafafa; text-align: center; padding: 40px;">
-
-    <nav style="margin-bottom: 30px;">
-        <a href="/" style="margin-right: 20px; text-decoration: none; color: #e74c3c; font-weight: bold;">Home</a>
-        <a href="/about/" style="text-decoration: none; color: #333; font-weight: bold;">About</a>
+<body>
+    <header>
+        <h1>Welcome to Tasty Bites</h1>
+        <p>Delicious food, made fresh for you</p>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/menu/">Menu</a>
+        <a href="/about/">About Us</a>
     </nav>
-
-    <h1 style="color: #e74c3c;">About Tasty Bites</h1>
-    <p style="max-width: 600px; margin: auto; font-size: 18px; color: #555;">
-        Welcome to <strong>Tasty Bites</strong> – your go-to spot for delicious and freshly made meals.
-        We pride ourselves on using fresh ingredients, traditional recipes, and a touch of love in every dish.
-    </p>
-
-    <img src="https://via.placeholder.com/600x300" alt="Restaurant Image" 
-         style="margin-top: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
-
+    <main>
+        <p>Experience the best flavors in town. We bring you fresh, tasty dishes prepared with love.</p>
+    </main>
+    <footer>
+        &copy; 2025 Tasty Bites. All Rights Reserved.
+    </footer>
 </body>
 </html>
 

@@ -30,7 +30,32 @@
     </style>
 </head>
 <body>
+<h1>Contact Us</h1>
 
+<form id="contactForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message"></textarea><br><br>
+
+    <button type="submit">Send</button>
+</form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    if (!name || !email) {
+        alert("Please fill in both your name and email.");
+        event.preventDefault(); // stop form from submitting
+    }
+});
+</script>
     <main>
         {% block content %}{% endblock %}
     </main>

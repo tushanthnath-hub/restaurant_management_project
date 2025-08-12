@@ -121,79 +121,54 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Restaurant Homepage</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #ff6347; /* Tomato color */
-            padding: 20px;
+            font-family: Arial, sans-serif;
             text-align: center;
-            color: white;
+            padding: 40px;
+            background-color: #fafafa;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        .search-container {
+            margin-top: 20px;
         }
-        nav {
-            background-color: #333;
+        .search-input {
             padding: 10px;
-            text-align: center;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        nav a {
+        .search-button {
+            padding: 10px 16px;
+            font-size: 16px;
+            background-color: #4CAF50;
             color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            margin-left: 5px;
+            cursor: pointer;
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        main p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #333;
-            color: white;
-            margin-top: 30px;
+        .search-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Tasty Bites</h1>
-        <p>Delicious food, made fresh for you</p>
-    </header>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/menu/">Menu</a>
-        <a href="/about/">About Us</a>
-    </nav>
-    <main>
-        <p>Experience the best flavors in town. We bring you fresh, tasty dishes prepared with love.</p>
-    </main>
-    <footer>
-        &copy; 2025 Tasty Bites. All Rights Reserved.
-    </footer>
+
+    <h1>Welcome to Our Restaurant</h1>
+    <p>Find your favorite dishes easily</p>
+
+    <div class="search-container">
+        <form method="get" action="#">
+            <input type="text" name="search" class="search-input" placeholder="Search menu items...">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+
 </body>
 </html>
 
